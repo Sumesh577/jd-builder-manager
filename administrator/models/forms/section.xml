@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="created_by" type="createdby" default="0" label="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_CREATED_BY" description="COM_JDBUILDERMANAGER_FORM_DESC_SECTION_CREATED_BY" hidden="true" hint="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_MODIFIED_BY" description="COM_JDBUILDERMANAGER_FORM_DESC_SECTION_MODIFIED_BY" hidden="true" hint="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_MODIFIED_BY"/>
+    <field name="title" filter="safehtml" type="text" label="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_TITLE" description="COM_JDBUILDERMANAGER_FORM_DESC_SECTION_TITLE" hint="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_TITLE"/>
+    <field name="categories" extension="com_jdbuildermanager.sections" type="category" label="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_CATEGORIES" description="COM_JDBUILDERMANAGER_FORM_DESC_SECTION_CATEGORIES" hint="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_CATEGORIES"/>
+    <field name="thumbnail" directory="" type="media" label="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_THUMBNAIL" description="COM_JDBUILDERMANAGER_FORM_DESC_SECTION_THUMBNAIL" hint="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_THUMBNAIL"/>
+    <field name="content" filter="safehtml" type="textarea" label="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_CONTENT" description="COM_JDBUILDERMANAGER_FORM_DESC_SECTION_CONTENT" hint="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_CONTENT"/>
+    <field name="minversion" filter="safehtml" type="number" label="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_MINVERSION" description="COM_JDBUILDERMANAGER_FORM_DESC_SECTION_MINVERSION" hint="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_MINVERSION"/>
+    <field name="views" filter="safehtml" type="number" label="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_VIEWS" description="COM_JDBUILDERMANAGER_FORM_DESC_SECTION_VIEWS" hint="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_VIEWS"/>
+    <field name="status" filter="safehtml" type="number" label="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_STATUS" description="COM_JDBUILDERMANAGER_FORM_DESC_SECTION_STATUS" hint="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_STATUS"/>
+    <field name="updatedon" default="0000-00-00 00:00:00" type="calendar" class="inputbox" format="%Y-%m-%d %H:%M:%S" showtime="true" translateformat="true" label="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_UPDATEDON" description="COM_JDBUILDERMANAGER_FORM_DESC_SECTION_UPDATEDON" hint="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_UPDATEDON"/>
+    <field name="createdon" default="0000-00-00 00:00:00" type="calendar" class="inputbox" format="%Y-%m-%d %H:%M:%S" showtime="true" translateformat="true" label="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_CREATEDON" description="COM_JDBUILDERMANAGER_FORM_DESC_SECTION_CREATEDON" hint="COM_JDBUILDERMANAGER_FORM_LBL_SECTION_CREATEDON"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_jdbuildermanager</name>
+    <creationDate>2019-06-19</creationDate>
+    <copyright>Copyright (C) 2019 Joomdev, Inc. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>JoomDev</author>
+    <authorEmail>info@joomdev.com</authorEmail>
+    <authorUrl>http://joomdev.com</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description></description>
+    
+    
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <update> <!-- Runs on update -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/update.mysql.utf8.sql</file>
+        </sql>
+    </update>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>jdbuildermanager.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <media destination="com_jdbuildermanager" folder="media">
+        <folder>js</folder>
+        <folder>css</folder>
+    </media>
+    <languages folder="site/languages">
+        
+			<language tag="en-GB">en-GB/en-GB.com_jdbuildermanager.ini</language>
+    </languages>
+    <administration>
+        <menu>COM_JDBUILDERMANAGER</menu>
+        <submenu>
+            
+			<menu link="option=com_jdbuildermanager&amp;view=sections" view="sections" alt="Jdbuildermanager/Sections">COM_JDBUILDERMANAGER_TITLE_SECTIONS</menu>
+
+			<menu link="option=com_categories&amp;extension=com_jdbuildermanager.sections" view="categories" alt="Jdbuildermanager/Categories">COM_JDBUILDERMANAGER_SECTIONS_CATEGORIES</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>jdbuildermanager.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="administrator/languages">
+            
+			<language tag="en-GB">en-GB/en-GB.com_jdbuildermanager.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_jdbuildermanager.sys.ini</language>
+        </languages>
+    </administration>
+    <config>
+        <fields name="params">
+            <fieldset name="component">
+                <field name="save_history" default="0" />
+            </fieldset>
+        </fields>
+    </config>
+    <plugins>
+        <plugin group="search" plugin="jdbuildermanager"/>
+    </plugins>
+    
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->
